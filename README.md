@@ -8,7 +8,7 @@ Este template foi desenvolvido para auxiliar no aprendizado e na implementação
 A estrutura do projeto é organizada conforme os princípios do DDD, separando as responsabilidades em camadas distintas:
 - **Domain:** Contém as entidades ricas, objetos de valor e interfaces dos repositórios.
 - **Application:** Inclui os casos de uso da aplicação.
-- **Infrastructure:** Abriga as implementações de repositórios, os controllers, as configurações de banco de dados e demais serviços externos.
+- **Infra:** Abriga as implementações de repositórios, os controllers, as configurações de banco de dados e demais serviços externos.
 
 ## Tecnologias Utilizadas
 - **Node.js:** Ambiente de execução JavaScript server-side.
