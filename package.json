@@ -1,0 +1,33 @@
+{
+  "name": "api-studies",
+  "version": "1.0.0",
+  "description": "Projeto de estudo de API com DDD utilizando Fastify e Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env ./src/server.ts",
+    "lint": "biome check --write ./src",
+    "test": "tsx --test",
+    "test:cov": "tsx --test --experimental-test-coverage",
+    "build": "tsup-node"
+  },
+  "keywords": ["api", "fastify", "nodejs"],
+  "author": "Bruno Fukumori",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.3",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "fastify-type-provider-zod": "^4.0.2",
+    "zod": "^3.24.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+  }
+}
