@@ -1,7 +1,7 @@
 import assert from "node:assert";
 import { beforeEach, describe, it } from "node:test";
 
-import { InMemoryUserRepository } from "@application/repositories/in-memory/in-memory-user-repository.js";
+import { InMemoryUserRepository } from "@infra/repositories/in-memory/in-memory-user-repository.js";
 import { CreateUserUseCase } from "./index.js";
 
 let inMemoryUserRepository: InMemoryUserRepository;

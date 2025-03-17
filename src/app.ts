@@ -6,11 +6,11 @@ import {
   validatorCompiler,
 } from "fastify-type-provider-zod";
 
-import { makeCreateUserRoute } from "@application/factories/create-user-factory.js";
-import { makeListUsersRoute } from "@application/factories/list-users-factory.js";
-import { SQLiteUserRepository } from "@application/repositories/implementation/sqlite-user-repository.js";
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
+import { makeCreateUserRoute } from "@infra/factories/create-user-factory.js";
+import { makeListUsersRoute } from "@infra/factories/list-users-factory.js";
+import { SQLiteUserRepository } from "@infra/repositories/implementation/sqlite-user-repository.js";
 import { errorHandler } from "./error-handler.js";
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>();
