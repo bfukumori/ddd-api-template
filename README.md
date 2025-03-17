@@ -1,3 +1,5 @@
+![Test Status](https://github.com/bfukumori/ddd-api-tempalte/actions/workflows/run-tests.yml/badge.svg)
+
 # DDD API Template
 Este é um projeto de estudo de uma API utilizando os conceitos de Domain-Driven Design (DDD) com Fastify e Node.js.
 
