@@ -12,6 +12,9 @@ export class ListUsersController {
       "/users",
       {
         schema: {
+          tags: ["users"],
+          summary: "List users",
+          description: "List all users",
           response: LIST_USERS_SCHEMA_RESPONSE,
         },
       },

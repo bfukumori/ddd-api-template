@@ -15,6 +15,9 @@ export class CreateUserController {
       "/users/create",
       {
         schema: {
+          tags: ["users"],
+          summary: "Create a new user",
+          description: "Create a new user with the given name and age",
           body: CREATE_USER_SCHEMA_REQUEST,
           response: CREATE_USER_SCHEMA_RESPONSE,
         },
