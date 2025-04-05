@@ -1,11 +1,8 @@
 import { DatabaseSync } from "node:sqlite";
+import { CREATE_USER_TABLE_SQL } from "./scripts.js";
 
 export const db = new DatabaseSync("./src/infra/db/data.sqlite");
 
-db.exec(`CREATE TABLE IF NOT EXISTS users (
-      id TEXT PRIMARY KEY,
-      name TEXT NOT NULL,
-      age INTEGER NOT NULL
-    )`);
+db.exec(CREATE_USER_TABLE_SQL);
 
 process.on("exit", () => db.close());
