@@ -11,25 +11,32 @@
     "test:cov": "tsx --test --experimental-test-coverage",
     "build": "tsup-node"
   },
-  "keywords": ["api", "fastify", "nodejs"],
+  "keywords": [
+    "api",
+    "fastify",
+    "nodejs"
+  ],
   "author": "Bruno Fukumori",
   "license": "ISC",
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.7.0",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/node": "^22.13.10",
+    "@types/node": "^22.14.0",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@fastify/swagger": "^9.4.2",
     "@fastify/swagger-ui": "^5.2.2",
-    "fastify": "^5.2.1",
+    "fastify": "^5.2.2",
     "fastify-type-provider-zod": "^4.0.2",
     "zod": "^3.24.2"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ]
   }
 }
