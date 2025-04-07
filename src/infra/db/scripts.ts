@@ -1,7 +1,9 @@
 const CREATE_USER_TABLE_SQL = `CREATE TABLE IF NOT EXISTS users (
       id TEXT PRIMARY KEY,
       name TEXT NOT NULL,
-      age INTEGER NOT NULL
+      email TEXT NOT NULL UNIQUE,
+      age INTEGER NOT NULL CHECK(age > 0),
+      password TEXT NOT NULL
     )`;
 
 const DROP_USER_TABLE_SQL = "DROP TABLE IF EXISTS users";

@@ -12,7 +12,27 @@ export class InMemoryUserRepository implements UserRepository {
     return this.#users;
   }
 
-  async findByName(name: string): Promise<User | null> {
-    return this.#users.find((user) => user.getName() === name) ?? null;
+  async findById(id: string): Promise<User | null> {
+    return this.#users.find((user) => user.getId() === id) ?? null;
+  }
+
+  async findByEmail(email: string): Promise<User | null> {
+    return this.#users.find((user) => user.getEmail() === email) ?? null;
+  }
+
+  async update(user: User): Promise<void> {
+    const userIndex = this.#users.findIndex((u) => u.getId() === user.getId());
+
+    if (userIndex !== -1) {
+      this.#users[userIndex] = user;
+    }
+  }
+
+  async delete(id: string): Promise<void> {
+    const userIndex = this.#users.findIndex((user) => user.getId() === id);
+
+    if (userIndex !== -1) {
+      this.#users.splice(userIndex, 1);
+    }
   }
 }

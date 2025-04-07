@@ -3,14 +3,50 @@
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 
+# @name listUsers
 GET http://{{host}}/users HTTP/1.1
 
 ###
+@userId = {{listUsers.response.body.users[0].id}}
+@email = {{listUsers.response.body.users[0].email}}
 
+# @name findUserById
+GET http://{{host}}/users/{{userId}} HTTP/1.1
+
+###
+
+# @name findUserByEmail
+GET http://{{host}}/users/{{email}} HTTP/1.1
+
+###
+
+# @name createUser
 POST http://{{host}}/users/create HTTP/1.1
 Content-Type: {{contentType}}
 
 {
-  "name": "Goku",
-  "age": 35
+  "name": "John Doe",
+  "age": 30,
+  "email": "johndoe@example.com",
+  "password": "Aa#1bcde",
+  "confirmPassword": "Aa#1bcde"
 }
+
+###
+
+# @name updateUser
+PUT http://{{host}}/users/{{userId}}/update HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "name": "John Doe",
+  "age": 25,
+  "email": "johndoe@example.com",
+  "password": "Aa#1bcde",
+  "confirmPassword": "Aa#1bcde"
+}
+
+###
+
+# @name deleteUser
+DELETE http://{{host}}/users/{{userId}}/delete HTTP/1.1

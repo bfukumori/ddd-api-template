@@ -8,8 +8,10 @@ import {
 
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
-import { makeCreateUserRoute } from "@infra/factories/create-user-factory.js";
-import { makeListUsersRoute } from "@infra/factories/list-users-factory.js";
+import { makeCreateUserRoute } from "@infra/factories/user/create-user-factory.js";
+import { makeDeleteUserRoute } from "@infra/factories/user/delete-user-factory.js";
+import { makeListUsersRoute } from "@infra/factories/user/list-users-factory.js";
+import { makeUpdateUserRoute } from "@infra/factories/user/update-user-factory.js";
 import { SQLiteUserRepository } from "@infra/repositories/implementation/sqlite-user-repository.js";
 import { errorHandler } from "./error-handler.js";
 
@@ -38,3 +40,5 @@ app.decorate("userRepository", new SQLiteUserRepository());
 
 app.register(makeCreateUserRoute);
 app.register(makeListUsersRoute);
+app.register(makeUpdateUserRoute);
+app.register(makeDeleteUserRoute);

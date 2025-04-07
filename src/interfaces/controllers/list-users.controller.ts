@@ -2,7 +2,7 @@ import type { FastifyInstance } from "fastify";
 import type { ZodTypeProvider } from "fastify-type-provider-zod";
 
 import type { ListUsersUseCase } from "@application/use-cases/list-users/index.js";
-import { LIST_USERS_SCHEMA_RESPONSE } from "@application/use-cases/list-users/list-users.schema.js";
+import { LIST_USERS_SCHEMA_RESPONSE } from "../validators/user/list-users.schema.js";
 
 export class ListUsersController {
   constructor(private readonly listUsersUseCase: ListUsersUseCase) {}
