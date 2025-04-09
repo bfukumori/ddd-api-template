@@ -11,6 +11,7 @@ A estrutura do projeto é organizada conforme os princípios do DDD, separando a
 - **Domain:** Contém as entidades ricas, objetos de valor e interfaces dos repositórios.
 - **Application:** Inclui os casos de uso da aplicação.
 - **Infra:** Abriga as implementações de repositórios, os controllers, as configurações de banco de dados e demais serviços externos.
+- **Interfaces:** Abriga os arquivos de comunicam o domínio com o meio externo como DTOs, mappers, validators e controllers.
 
 ## Tecnologias Utilizadas
 - **Node.js:** Ambiente de execução JavaScript server-side.
