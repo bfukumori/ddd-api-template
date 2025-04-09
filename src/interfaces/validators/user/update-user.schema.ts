@@ -1,6 +1,11 @@
 import { z } from "zod";
+import { USER_SCHEMA } from "./user.schema.js";
 
-export const UPDATE_USER_SCHEMA_RESPONSE = {
+const UPDATE_USER_SCHEMA = USER_SCHEMA.partial().extend({
+  id: USER_SCHEMA.shape.id,
+});
+
+const UPDATE_USER_SCHEMA_RESPONSE = {
   200: z.void(),
   400: z.object({
     message: z.string(),
@@ -14,3 +19,5 @@ export const UPDATE_USER_SCHEMA_RESPONSE = {
     message: z.string(),
   }),
 };
+
+export { UPDATE_USER_SCHEMA, UPDATE_USER_SCHEMA_RESPONSE };

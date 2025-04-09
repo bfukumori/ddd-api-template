@@ -8,9 +8,7 @@ const USER_SCHEMA = z.object({
   password: z.string(),
 });
 
-const USER_PARAMS_SCHEMA = z.object({
-  id: z.string().uuid(),
-});
+const USER_PARAMS_SCHEMA = USER_SCHEMA.pick({ id: true });
 
 const USER_SCHEMA_WITHOUT_PASSWORD = USER_SCHEMA.omit({
   password: true,

@@ -4,12 +4,12 @@ import { beforeEach, describe, it } from "node:test";
 
 import { User } from "@domain/entities/user.js";
 import { InMemoryUserRepository } from "@infra/repositories/in-memory/in-memory-user-repository.js";
-import type { UserDTO } from "src/interfaces/dtos/user/user.dto.js";
+import type { UpdateUserDTO } from "src/interfaces/dtos/user/update-user.dto.js";
 import { UpdateUserUseCase } from "./index.js";
 
 let inMemoryUserRepository: InMemoryUserRepository;
 let sut: UpdateUserUseCase;
-let data: UserDTO;
+let data: UpdateUserDTO;
 
 describe("UpdateUserUseCase", () => {
   beforeEach(() => {
